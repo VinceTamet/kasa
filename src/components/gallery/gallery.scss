@@ -1,0 +1,20 @@
+.gallery-container {
+    background-color: #F6F6F6; 
+    width: 85%; 
+    margin: 0 auto; 
+    padding: 2em; 
+    border-radius: 1em;
+    margin-bottom: 3%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 3%; 
+}
+
+.card {
+    background-color: #FF6060; 
+    border-radius: 1em; 
+    height: 200px;
+}

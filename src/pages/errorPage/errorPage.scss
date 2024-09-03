@@ -1,0 +1,37 @@
+/* src/pages/ErrorPage.scss */
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+}
+
+.error-code {
+    font-size: 288px;
+    font-weight: 700;
+    color: #FF6060; 
+    margin: 0;
+}
+
+.error-message {
+    font-size: 36px;
+    font-weight: 500;
+    color: #FF6060;
+    margin-top: -40px; 
+}
+
+.home-link {
+    margin-top: 50px;
+    padding-bottom: 16%;
+    font-size: 18px;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+        color: #FF6060;
+    }
+}

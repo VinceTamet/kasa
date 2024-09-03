@@ -1,0 +1,31 @@
+.toggle-list {
+    .toggle-button {
+        background-color: #FF6060;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 1em;
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .arrow.up {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .content {
+        padding: 10px;
+        color: black;
+        border-radius: 0 0 1em 1em;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+}

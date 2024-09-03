@@ -1,0 +1,65 @@
+.values-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    // margin-top: 2em;
+
+    .values-item {
+        background-color: #FF6060;
+        border-radius: 1em;
+        padding: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #ff7b7b;
+        }
+
+        .values-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2 {
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 24px;
+            }
+
+            .arrow {
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 5px;
+                margin-left: 10px;
+            }
+
+            .right {
+                transform: rotate(45deg);
+            }
+
+            .down {
+                transform: rotate(225deg);
+            }
+        }
+
+        .values-content {
+            margin-top: 1em;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+
+    .active {
+        height: auto;
+    }
+}
+
+.values-section {
+    margin: 0 auto;
+    padding-bottom: 4em;
+    max-width: 80%;
+}

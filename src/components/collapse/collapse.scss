@@ -1,0 +1,35 @@
+.collapse-container {
+    .collapse-button {
+        background-color: #FF6060;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 1em;
+        margin-bottom: 5px;
+
+        &:focus {
+            outline: none;
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .arrow-up {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .collapse-content {
+        padding: 10px;
+        background-color: #F6F6F673;
+        border-radius: 0.5em;
+        margin-bottom: 10px;
+    }
+}

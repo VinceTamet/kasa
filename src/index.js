@@ -9,6 +9,7 @@ import { ErrorPage } from './pages/errorPage/errorPage';
 import App from './App';
 import FicheLogement from './pages/ficheLogementPage';
 
+
 const router = createBrowserRouter([
   {
     path: "/",

@@ -24,7 +24,6 @@ console.log(logements)
     return <div>ECRAN A FAIRE</div>;  
   }
 
-
   const prevImg = () => {
     const newIndex = currentIndex === 0 ? logements.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
@@ -48,8 +47,6 @@ console.log(logements)
         logement={logement}
       />
       <div className="fiche-logement-container">
-        {/* <Tag tags={logement.tags} /> */}
-
         <Collapse title="Description">
           <p>{logement.description}</p>
         </Collapse>

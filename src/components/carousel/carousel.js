@@ -2,43 +2,56 @@ import React from 'react';
 import ToggleList from '../descriptionEquip/descriptionEquip';
 import './carousel.scss';
 import Tag from '../tag/tag';
+import Rating from '../rating/rating';
 
 function Carousel({ currentIndex, nextImg, prevImg, logement }) {
-    return (
-        <div className="carousel-container">
-            <button onClick={prevImg}>&lt;</button>
-            <img src={logement.cover} alt={logement.title} className="cover-image"/>
-            <button onClick={nextImg}>&gt;</button>
-            <div className="details-container">
-                <div className="title-location">
-                    <h2 className="title">{logement.title}</h2>
-                    <p className="location">{logement.location}</p>
-                    <div className="tags-container">
-                       <Tag tags={logement.tags}/>
-                    </div>
-                </div>
-                
-                <div className="host-info">
-                    <p className="host-name">{logement.host.name}</p>
-                    <div className="profile-image" style={{backgroundImage: `url(${logement.host.picture})`}}></div>
-                    {/* <div className="rating">
-                        {[1, 2, 3, 4, 5].map(star => (
-                            <div key={star} className={`star ${star <= 3 ? 'active' : 'inactive'}`}></div>
-                        ))}
-                    </div> */}
-                </div>
-            </div>
-            {/* <ToggleList title="Description">
-                <p>{logement.description}</p>
-            </ToggleList>
-            <ToggleList title="Équipements">
-                <ul>
-                    {logement.equipments.map((equip, index) => (
-                        <li key={index}>{equip}</li>
-                    ))}
-                </ul>
-            </ToggleList> */}
-        </div>
+    return React.createElement(
+        'div',
+        { className: 'carousel-container' },
+        React.createElement(
+            'button',
+            { onClick: prevImg },
+            '<'
+        ),
+        React.createElement('img', {
+            src: logement.cover,
+            alt: logement.title,
+            className: 'cover-image',
+        }),
+        React.createElement(
+            'button',
+            { onClick: nextImg },
+            '>'
+        ),
+        React.createElement(
+            'div',
+            { className: 'details-container' },
+            React.createElement(
+                'div',
+                { className: 'title-location' },
+                React.createElement('h2', { className: 'title' }, logement.title),
+                React.createElement('p', { className: 'location' }, logement.location),
+                React.createElement(
+                    'div',
+                    { className: 'tags-container' },
+                    React.createElement(Tag, { tags: logement.tags })
+                )
+            ),
+            React.createElement(
+                'div',
+                null,
+                React.createElement(
+                    'div',
+                    { className: 'host-info' },
+                    React.createElement('p', { className: 'host-name' }, logement.host.name),
+                    React.createElement('div', {
+                        className: 'profile-image',
+                        style: { backgroundImage: `url(${logement.host.picture})` },
+                    })
+                ),
+                React.createElement(Rating, { rating: logement.rating })
+            )
+        )
     );
 }
 

@@ -2,13 +2,13 @@ import React from 'react';
 import './logementsDetail.scss';
 
 function LogementsDetail({ logement }) {
-  return (
-    <div className="logement-detail">
-      <h1>{logement.title}</h1>
-      <img src={logement.cover} alt={logement.title} />
-      <p>{logement.description}</p>
-    </div>
-  );
+    return React.createElement(
+        'div',
+        { className: 'logement-detail' },
+        React.createElement('h1', null, logement.title),
+        React.createElement('img', { src: logement.cover, alt: logement.title }),
+        React.createElement('p', null, logement.description)
+    );
 }
 
 export default LogementsDetail;

@@ -1,38 +1,41 @@
 .carousel-container {
     position: relative;
-    width: 1240px;
+    width: 92%;
     margin: auto;
-    overflow: hidden;
+    padding: 3%;
 
     .cover-image {
         width: 100%;
-        height: 415px;
-        object-fit: cover;
+        //TODO 
+        // height à revoir
+        height: 600px;
         border-radius: 1em;
     }
 
     button {
         position: absolute;
         top: 50%;
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
+        background: none;
+        color: black;
         border: none;
+        font-size: 5em;
         cursor: pointer;
         padding: 10px;
-        background-color: rgba(166, 42, 42, 0.5);
+        margin: 0%;
+        background-color: none;
     }
 
     button:hover {
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.1);
     }
 
     button:first-child {
-        left: 10px;
+        left: 0px;
     }
 
-    button:last-child {
-        right: 0px;
-    }
+    // button:last-child {
+    //     ;
+    // }
 
     .details-container {
         display: flex;
@@ -68,21 +71,32 @@
         }
 
         .host-info {
-            text-align: right;
+            display: flex;
+            align-items: center;
             color: #FF6060;
             font-size: 18px;
             font-weight: 500;
+
+            .host-name {
+                font-size: 18px;
+                font-weight: 500;
+                color: #FF6060;
+                margin-right: 10px;
+            }
+            
 
             .profile-image {
                 width: 64px;
                 height: 64px;
                 border-radius: 50%;
                 background-size: cover;
+                background-position: center;
                 margin-left: 10px;
             }
 
             .rating {
                 display: flex;
+                padding-top: 10px; 
 
                 .star {
                     width: 36px;

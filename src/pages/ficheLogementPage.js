@@ -3,6 +3,9 @@ import { useParams, Link } from 'react-router-dom';
 import logements from '../data/logements.json';
 import Carousel from '../components/carousel/carousel';
 import { Layout } from '../components/layout';
+import Collapse from "../components/collapse/collapse";
+import Tag from '../components/tag/tag';
+import './ficheLogement.scss'
 
 function FicheLogement() {
 console.log(logements)
@@ -18,7 +21,7 @@ console.log(logements)
 
 
   if (!logement) {
-    return <div>Chargement...</div>;  
+    return <div>ECRAN A FAIRE</div>;  
   }
 
 
@@ -44,6 +47,20 @@ console.log(logements)
         prevImg={prevImg}
         logement={logement}
       />
+      <div className="fiche-logement-container">
+        {/* <Tag tags={logement.tags} /> */}
+
+        <Collapse title="Description">
+          <p>{logement.description}</p>
+        </Collapse>
+        <Collapse title="Équipements">
+          <ul>
+            {logement.equipments.map((equip, index) => (
+              <li key={index}>{equip}</li>
+            ))}
+          </ul>
+        </Collapse>
+      </div>
     </Layout>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, {useState } from 'react'
 import './collapse.scss'
 
 function Collapse({title, children}) {

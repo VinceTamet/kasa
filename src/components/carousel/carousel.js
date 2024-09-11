@@ -1,6 +1,7 @@
 import React from 'react';
 import ToggleList from '../descriptionEquip/descriptionEquip';
 import './carousel.scss';
+import Tag from '../tag/tag';
 
 function Carousel({ currentIndex, nextImg, prevImg, logement }) {
     return (
@@ -13,9 +14,7 @@ function Carousel({ currentIndex, nextImg, prevImg, logement }) {
                     <h2 className="title">{logement.title}</h2>
                     <p className="location">{logement.location}</p>
                     <div className="tags-container">
-                        {logement.tags.map((tag, index) => (
-                            <span key={index} className="tag">{tag}</span>
-                        ))}
+                       <Tag tags={logement.tags}/>
                     </div>
                 </div>
                 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './card.scss'
 
 function Card({ logement }) {
     return React.createElement(
@@ -8,7 +9,11 @@ function Card({ logement }) {
         React.createElement(
             Link,
             { to: `/logements/${logement.id}` },
-            // React.createElement('img', { src: logement.cover, alt: logement.title }),
+            React.createElement('img', {
+                src: logement.cover,
+                alt: logement.title,
+                className: 'card-image',
+            }),
             React.createElement('h2', null, logement.title)
         )
     );

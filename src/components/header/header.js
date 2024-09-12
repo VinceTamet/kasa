@@ -25,7 +25,7 @@ export function Header() {
                 React.createElement(
                     'li',
                     null,
-                    React.createElement(Link, { to: '/about', className: 'nav-link' }, 'À propos')
+                    React.createElement(Link, { to: '/about', className: 'nav-link' }, 'À Propos')
                 )
             )
         )

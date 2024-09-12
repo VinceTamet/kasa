@@ -13,22 +13,3 @@ code {
 }
 
 
-// BANNER
-.banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 300px; 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
-
-  h1 {
-      color: white;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 48px;
-  }
-}
-
-

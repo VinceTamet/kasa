@@ -4,14 +4,14 @@
         color: white;
         padding: 10px 20px;
         border: none;
-        width: 100%;
+        width: 1023px;
         text-align: left;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-radius: 1em;
-        margin-bottom: 5px;
+        border-radius: 3px;
+        margin: 0% 0% 1.5% 20%;
 
         &:focus {
             outline: none;
@@ -30,6 +30,25 @@
         padding: 10px;
         background-color: #F6F6F673;
         border-radius: 0.5em;
-        margin-bottom: 10px;
+        margin: -2% 0% 1% 70%;
+        width: 97%;
+        
+    }
+
+    @media (max-width:375px) {
+        width: 335px;
+        margin-left: -13%;
+        
+        .collapse-button{
+        width: 335px;
+        margin-left: 21%;
+        margin-bottom: 3%;
+        }
+
+        .collapse-content{
+            margin-left: 21%;
+            
+            width: 94%;
+        }
     }
 }

@@ -1,4 +1,6 @@
 import React, {useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './collapse.scss'
 
 function Collapse({title, children}) {
@@ -23,14 +25,22 @@ function Collapse({title, children}) {
                 onClick: toggle
             },
             title,
-            React.createElement('span', { className: `arrow ${isOpen ? 'arrow-up' : 'arrow-down'}` }, '▼')
+            React.createElement(
+                FontAwesomeIcon,
+                {
+                    icon: isOpen ? faChevronDown : faChevronUp,
+                    className: 'collapse-icon',
+                }
+            )
         ),
         // Si isOpen === true alors on créé la div si non rien ne se passe
-        isOpen && React.createElement(
-            'div',
-            { className: 'collapse-content' },
-            children
-        )
+        isOpen
+            ? React.createElement(
+                  'div',
+                  { className: 'collapse-content' },
+                  children
+              )
+            : null
     );
 }
 

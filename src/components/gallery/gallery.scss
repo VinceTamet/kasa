@@ -20,8 +20,8 @@
 
     
     @media (max-width: 375px) {
-        grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
-        margin: 0% 0% 0% -2.9%;
+        grid-template-columns: 1fr;
+        margin: 0% 0% 0% -9.5%;
     }
 }
 

@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
   
   .footer-content {
@@ -13,4 +14,11 @@
   
   .footer-content p {
     margin: 0;
+    font-size: 24px;
+
+    @media (max-width:375px) {
+      font-size: 12px;
+      width: 133.59px;
+      padding-top: 4%;
+    }
   }

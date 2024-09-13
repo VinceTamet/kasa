@@ -1,20 +1,27 @@
 .gallery-container {
     background-color: #F6F6F6; 
-    width: 85%; 
+    width: 1240px; 
     margin: 0 auto; 
-    padding: 2em; 
     border-radius: 1em;
-    margin-bottom: 3%;
+    margin: 0% 0% 3% 15%;
+
+    @media (max-width: 375px) {
+        padding: 0;        
+        margin: 0; 
+        background: none; 
+    }
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 3%; 
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+    padding: 20px;
+
+    
+    @media (max-width: 375px) {
+        grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+        margin: 0% 0% 0% -2.9%;
+    }
 }
 
-.card {
-    background-color: #FF6060; 
-    border-radius: 1em; 
-    height: 200px;
-}

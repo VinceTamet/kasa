@@ -4,7 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3% 5% 0% 5%;
+    width: 1240px;
+    padding: 3% 0% 0% 15%;
 
       .logo {
         img {
@@ -14,6 +15,10 @@
       }
 
       @media (max-width: 375px) {
+        width: 335px;
+        padding: 3% 0% 0% 5%;
+
+
         .logo{
           img {
             width: 100px;
@@ -51,7 +56,6 @@
 
     .nav-link {
       font-size: 12px;
-      // font-family: 'Montserrat';
       line-height: 17.11px;
     }
 

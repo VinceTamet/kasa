@@ -1,15 +1,15 @@
 .carousel-container {
     position: relative;
-    width: 92%;
-    margin: auto;
-    padding: 3%;
+    
 
     .cover-image {
-        width: 100%;
-        //TODO 
-        // height à revoir
-        height: 600px;
+        width: 1240px;
+        height: 415px;
+        top: 163px;
+        left: 1000px;
         border-radius: 1em;
+        margin: 3% 0% 2% 15%;
+
     }
 
     button {
@@ -32,10 +32,6 @@
     button:first-child {
         left: 0px;
     }
-
-    // button:last-child {
-    //     ;
-    // }
 
     .details-container {
         display: flex;

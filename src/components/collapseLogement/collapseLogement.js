@@ -1,9 +1,9 @@
 import React, {useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import './collapse.scss';
+import './collapseLogement.scss'
 
-function Collapse({title, children}) {
+function CollapseLogement({title, children}) {
 
     const [isOpen, setIsOpen] = useState(false);
     // Si isOpen est true (contenu visible) => !isOpen deviendra false
@@ -16,11 +16,11 @@ function Collapse({title, children}) {
 
     return React.createElement(
         'div',
-        { className: 'collapse-container' },
+        { className: 'collapse-container-logement' },
         React.createElement(
             'button',
             {
-                className: 'collapse-button',
+                className: 'collapse-button-logement',
                 // Au clic : toggle est appemé et inverse l'état de isOpen 
                 onClick: toggle
             },
@@ -33,17 +33,18 @@ function Collapse({title, children}) {
                 }
             )
         ),
+        // Si isOpen === true alors on créé la div si non rien ne se passe
         isOpen
             ? React.createElement(
                   'div',
-                  { className: 'collapse-content' },
+                  { className: 'collapse-content-logement' },
                   children
               )
             : null
     );
 }
 
-export default Collapse;
+export default CollapseLogement;
 
 
 

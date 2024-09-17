@@ -3,7 +3,7 @@
     width: 1240px;
     height: 415px;
     top: 40px;
-    left: 100px;
+    left: 10px;
     margin: 0 auto;
     border-radius: 1em;
     overflow: hidden;
@@ -25,6 +25,7 @@
         font-size: 2em;
         cursor: pointer;
         z-index: 1;
+        font-size: 119px;
 
         &.prev-button {
             left: 20px;

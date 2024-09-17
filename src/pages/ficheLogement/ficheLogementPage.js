@@ -7,7 +7,9 @@ import Collapse from "../../components/collapse/collapse";
 import { useNavigate } from "react-router-dom";
 import Tag from "../../components/tag/tag";
 import Rating from "../../components/rating/rating";
+import "../../components/collapse/collapse.scss";
 import "./ficheLogement.scss";
+import CollapseLogement from "../../components/collapseLogement/collapseLogement";
 
 function FicheLogement() {
   const { id } = useParams();
@@ -86,15 +88,15 @@ function FicheLogement() {
 
       React.createElement(
         "div",
-        { className: "fiche-logement-collapse" },
+        { className: 'fiche-logement-collapse'},
         React.createElement(
-          Collapse,
-          { title: "Description" },
+          CollapseLogement,
+          { title: "Description"},
           React.createElement("p", null, logement.description)
         ),
         React.createElement(
-          Collapse,
-          { title: "Équipements" },
+            CollapseLogement,
+          {title: "Équipements"},
           React.createElement(
             "ul",
             null,

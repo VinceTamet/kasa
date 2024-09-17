@@ -1,109 +1,51 @@
 .carousel-container {
     position: relative;
-    
+    width: 1240px;
+    height: 415px;
+    top: 40px;
+    left: 100px;
+    margin: 0 auto;
+    border-radius: 1em;
+    overflow: hidden;
+    opacity: 1;
 
-    .cover-image {
-        width: 1240px;
-        height: 415px;
-        top: 163px;
-        left: 1000px;
-        border-radius: 1em;
-        margin: 3% 0% 2% 15%;
-
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    button {
+    .carousel-button {
         position: absolute;
         top: 50%;
+        transform: translateY(-50%);
         background: none;
-        color: black;
         border: none;
-        font-size: 5em;
+        color: white;
+        font-size: 2em;
         cursor: pointer;
-        padding: 10px;
-        margin: 0%;
-        background-color: none;
-    }
+        z-index: 1;
 
-    button:hover {
-        background: rgba(0, 0, 0, 0.1);
-    }
-
-    button:first-child {
-        left: 0px;
-    }
-
-    .details-container {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-
-        .title-location {
-            .title {
-                color: #FF6060;
-                font-size: 36px;
-                font-weight: 500;
-            }
-
-            .location {
-                color: black;
-                font-size: 18px;
-                font-weight: 500;
-            }
-
-            .tags-container {
-                margin-top: 10px;
-    
-                .tag {
-                    display: inline-block;
-                    background-color: #FF6060;
-                    color: white;
-                    border-radius: 1em;
-                    padding: 5px 10px;
-                    margin-right: 5px;
-                    font-size: 14px;
-                }
-            }
+        &.prev-button {
+            left: 20px;
         }
 
-        .host-info {
-            display: flex;
-            align-items: center;
-            color: #FF6060;
-            font-size: 18px;
-            font-weight: 500;
+        &.next-button {
+            right: 20px;
+        }
+    }
 
-            .host-name {
-                font-size: 18px;
-                font-weight: 500;
-                color: #FF6060;
-                margin-right: 10px;
-            }
-            
+    @media (max-width: 375px) {
+        width: 335px;
+        height: 255px;
+        top: auto; 
+        left: auto; 
+        margin: 20px auto;
 
-            .profile-image {
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                background-size: cover;
-                background-position: center;
-                margin-left: 10px;
-            }
-
-            .rating {
-                display: flex;
-                padding-top: 10px; 
-
-                .star {
-                    width: 36px;
-                    height: 36px;
-                    background-color: #E3E3E3;
-
-                    &.active {
-                        background-color: #FF6060;
-                    }
-                }
-            }
+        .carousel-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }

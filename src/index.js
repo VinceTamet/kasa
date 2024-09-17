@@ -7,7 +7,7 @@ import { HomePage } from './pages/homePage';
 import { About } from './pages/aboutPage';
 import { ErrorPage } from './pages/errorPage/errorPage';
 import App from './App';
-import FicheLogement from './pages/ficheLogementPage';
+import FicheLogement from './pages/ficheLogement/ficheLogementPage';
 
 
 const router = createBrowserRouter([

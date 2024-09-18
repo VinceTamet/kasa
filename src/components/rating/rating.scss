@@ -2,7 +2,15 @@
     display: flex;
     gap: 10px;
     font-size: 24px;
-    color: #FF6060; 
+    color: #FF6060;
+
+    @media (max-width:375px) {
+        width: 98px;
+        height: 18px;
+        font-size: 14px;
+        gap: 8px;
+        margin: -10% 0% 6% 13%;
+    }
 }
 
 .fa-regular.fa-star {

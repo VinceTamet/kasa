@@ -56,13 +56,21 @@
         
         .collapse-button-logement {
         width: 335px;
+        height: 30px;
         margin-left: 21%;
-        margin-bottom: 3%;
+        margin-bottom: 0%;
+        font-size: 13px;
+        font-weight: 700;
+        padding-left: 5%;
         }
 
         .collapse-content-logement {
             margin-left: 21%;
             width: 94%;
+
+            p {
+                font-size: 14px;
+            }
         }
     }
 }

@@ -1,7 +1,13 @@
 .tags-container {
     display: flex;
-    flex-wrap: wrap;  
-    gap: 10px;        
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    @media (max-width:375px) {
+        width: 84px;
+        height: 18px;
+        flex-wrap: nowrap;
+    }
 }
 
 .tag {
@@ -9,6 +15,23 @@
     color: white;
     padding: 5px 10px;
     border-radius: 1em;
-    font-size: 14px;
     display: inline-block;
+    height: 23px;
+    top: 705px;
+    left: 100px;
+    gap: 0px;
+    opacity: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.96px;
+    text-align: center;
+
+    @media (max-width:375px) {
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 14.26px;
+            text-align: center;
+            height: 14px;
+
+        }
 }

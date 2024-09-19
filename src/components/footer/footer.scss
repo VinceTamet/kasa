@@ -6,6 +6,12 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+
+    @media (max-width:375px) {
+      width: 375px;
+      height: 209px;
+    }
+
   }
   
   .footer-content {

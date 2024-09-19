@@ -1,10 +1,8 @@
 .carousel-container {
     position: relative;
-    width: 1240px;
+    width: 1200px;
     height: 415px;
-    top: 40px;
-    left: 10px;
-    margin: 0 auto;
+    margin-left: 20px;
     border-radius: 1em;
     overflow: hidden;
     opacity: 1;
@@ -39,9 +37,7 @@
     @media (max-width: 375px) {
         width: 335px;
         height: 255px;
-        top: auto; 
-        left: auto; 
-        margin: 20px auto;
+        margin: 27px 0px 0px 20px;
 
         .carousel-image {
             width: 100%;

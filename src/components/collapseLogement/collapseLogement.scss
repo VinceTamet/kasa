@@ -4,7 +4,7 @@
         background-color: #FF6060;
         color: white;
         border: none;
-        width: 582px;
+        width: 555px;
         height: 52px;
         text-align: left;
         cursor: pointer;
@@ -12,9 +12,14 @@
         justify-content: space-between;
         align-items: center;
         border-radius: 10px;
-        margin: 0% 0% 0% 22%;
         font-size: 18px;
         font-weight: 700;
+        padding-left: 15px;
+        padding-right: 10px;
+
+        svg {
+            font-size: 26px;
+        }
 
         &:focus {
             outline: none;
@@ -30,11 +35,11 @@
     }
 
     .collapse-content-logement {
-        padding: 10px;
-        background-color: #F6F6F673;
-        border-radius: 0.5em;
-        margin: 1% 0% 1% 22%;
-        width: 95%;
+        background-color: rgba(246, 246, 246);
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        padding: 5px;
+        width: 543px;
 
         p {
             font-size: 20px;
@@ -52,24 +57,20 @@
 
     @media (max-width:375px) {
         width: 335px;
-        margin-left: -13%;
         
         .collapse-button-logement {
         width: 335px;
         height: 30px;
-        margin-left: 21%;
-        margin-bottom: 0%;
         font-size: 13px;
         font-weight: 700;
-        padding-left: 5%;
         }
 
         .collapse-content-logement {
-            margin-left: 21%;
-            width: 94%;
+            width: 335px;
 
             p {
                 font-size: 14px;
+                padding: 25px 28px 20px 20px;
             }
 
             ul {

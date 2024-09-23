@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 720.68px;
-  width: 1200px;
+  gap: 60%;
+  width: 95%;
   margin: 45px 0px 50px 20px;
     
 
@@ -16,6 +16,13 @@
         }
       }
 
+      // TABLET
+    @media (max-width: 900px) {
+      width: 95%;
+      gap: 0px;
+    }
+
+      // MOBILE
       @media (max-width: 375px) {
         width: 335px;
         margin-top: 20px;

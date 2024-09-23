@@ -1,14 +1,10 @@
 .about-banner {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
+    // position: relative;
+    // background-size: cover;
+    // background-position: center;
     height: 223px;
     width: 1240px;
     border-radius: 2em; 
-    margin: 3% 0% 2% 8%;
 
     &::before {
         content: '';

@@ -1,6 +1,6 @@
 .carousel-container {
     position: relative;
-    width: 1200px;
+    width: 95%;
     height: 415px;
     margin-left: 20px;
     border-radius: 1em;
@@ -34,6 +34,13 @@
         }
     }
 
+    // TABLET
+    @media (max-width: 900px) {
+        width: 95%;
+        height: 15%;
+    }
+
+    // MOBILE
     @media (max-width: 375px) {
         width: 335px;
         height: 255px;

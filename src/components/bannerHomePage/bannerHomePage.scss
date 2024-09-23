@@ -1,15 +1,11 @@
 .banner {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-size: cover;
     background-position: center;
     height: 223px;
-    width: 1240px;
+    width: 1200px;
     border-radius: 2em; 
-    margin: 3% 0% 3% 8%;
-    
+    margin: 50px 0px 50px 20px;
 
     &::before {
         content: '';

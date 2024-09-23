@@ -2,8 +2,11 @@
     position: relative;
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 223px;
-    width: 1200px;
+    width: 95%;
     border-radius: 2em; 
     margin: 50px 0px 50px 20px;
 

@@ -1,27 +1,36 @@
 .gallery-container {
     background-color: #F6F6F6; 
-    width: 95%; 
-    margin: 0 auto; 
+    
+    width: 86.5%; 
+    margin-left: 20px;
     border-radius: 1em;
     margin-bottom: 50px;
+    padding-top: 56px;
+    padding-bottom: 43px;
+    padding-right: 4%;
+    padding-left: 4%;
 
     @media (max-width: 375px) {
-        padding: 0;        
-        margin: 0; 
+        width: 95%;
+        padding: 0%;
+        margin-left: 8px;
+        margin-bottom: 23px;
         background: none; 
     }
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 60px;
+    
 
     
     @media (max-width: 375px) {
         grid-template-columns: 1fr;
-        margin: 0% 0% 0% -9.5%;
+        gap: 20px;
+        
     }
 }
 

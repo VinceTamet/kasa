@@ -38,13 +38,15 @@
     @media (max-width: 900px) {
         width: 95%;
         height: 15%;
+
+        .carousel-button{
+            font-size: 75px;
+        }
     }
 
     // MOBILE
     @media (max-width: 375px) {
-        width: 335px;
-        height: 255px;
-        margin: 27px 0px 0px 20px;
+        margin-left: 8px;
 
         .carousel-image {
             width: 100%;

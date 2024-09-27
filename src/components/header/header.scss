@@ -2,10 +2,10 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 95%;
-  margin: 45px 0px 50px 20px;
+  width: 100%;
+  margin-top: 10px;
 
 
   .logo {
@@ -20,12 +20,11 @@
   // MOBILE
 
   @media (max-width: 375px) {
-    margin-top: 20px;
-    margin-left: 8px;
+    
 
     .logo {
       img {
-        width: 145px;
+        width: 120px;
         height: 46.88;
       }
     }
@@ -62,7 +61,7 @@
 
 @media (max-width: 428px) {
   .nav-link {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 

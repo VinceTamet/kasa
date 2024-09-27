@@ -5,14 +5,10 @@ import './collapseLogement.scss'
 
 function CollapseLogement({title, children}) {
 
-    const [isOpen, setIsOpen] = useState(false);
-    // Si isOpen est true (contenu visible) => !isOpen deviendra false
-    // Si isOpen est false (contenu caché) => !isOpen deviendra true
+    const [isOpen, setIsOpen] = useState(false)
     const toggle = () => {
         setIsOpen(!isOpen)
     }
-    // Chaque fois que la fonction toggle est appelée, elle inverse l'état de isOpen
-    // si contenu visible => devient caché et inversement
 
     return React.createElement(
         'div',
@@ -20,8 +16,7 @@ function CollapseLogement({title, children}) {
         React.createElement(
             'button',
             {
-                className: 'collapse-button-logement',
-                // Au clic : toggle est appemé et inverse l'état de isOpen 
+                className: 'collapse-button-logement', 
                 onClick: toggle
             },
             title,
@@ -33,7 +28,6 @@ function CollapseLogement({title, children}) {
                 }
             )
         ),
-        // Si isOpen === true alors on créé la div si non rien ne se passe
         isOpen
             ? React.createElement(
                   'div',

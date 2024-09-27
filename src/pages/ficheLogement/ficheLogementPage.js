@@ -3,12 +3,13 @@ import { useParams, Link } from "react-router-dom";
 import logements from "../../data/logements.json";
 import Carousel from "../../components/carousel/carousel";
 import { Layout } from "../../components/layout";
-import Collapse from "../../components/collapse/collapse";
 import { useNavigate } from "react-router-dom";
 import Tag from "../../components/tag/tag";
 import Rating from "../../components/rating/rating";
-import "../../components/collapse/collapse.scss";
 import "./ficheLogement.scss";
+// import '../../components/collapse/collapse.scss';
+// import Collapse from "../../components/collapse/collapse";
+import "../../components/collapse/collapse.scss";
 import CollapseLogement from "../../components/collapseLogement/collapseLogement";
 
 function FicheLogement() {
@@ -18,26 +19,29 @@ function FicheLogement() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const index = logements.findIndex((logement) => logement.id === id);
-    setCurrentIndex(index);
-    setLogement(logements[index]);
-  }, [id]);
+    if (logements.length > 0) {
+      const logement = logements.find((logement) => logement.id === id);
+      if (logement) {
+        setLogement(logement);
+      } else {
+        navigate("/404");
+      }
+    }
+  }, [id, logements, navigate]);
 
   if (!logement) {
-    navigate("/404");
+    return <div>Loading...</div>;
   } else {
     const prevImg = () => {
       const newIndex =
         currentIndex === 0 ? logements.length - 1 : currentIndex - 1;
       setCurrentIndex(newIndex);
-      setLogement(logements[newIndex]);
     };
 
     const nextImg = () => {
       const newIndex =
         currentIndex === logements.length - 1 ? 0 : currentIndex + 1;
       setCurrentIndex(newIndex);
-      setLogement(logements[newIndex]);
     };
 
     return React.createElement(
@@ -95,7 +99,7 @@ function FicheLogement() {
           React.createElement("p", null, logement.description)
         ),
         React.createElement(
-            CollapseLogement,
+          CollapseLogement,
           {title: "Équipements"},
           React.createElement(
             "ul",

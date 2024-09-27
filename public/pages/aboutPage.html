@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../../src/pages/aboutPage.js"></script>
+    <title>À propos</title>
+    <link rel="stylesheet" href="../../src/index.scss">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            
+            <img src="../../src/assets/kasa-logo.png" alt="Logo Kasa">
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/about">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner about-banner">
+        <img src="path-to-bannerImage" alt="À propos" class="banner-img">
+    </section>
+
+    <!-- VALUES SECTION -->
+    <section class="values-section">
+        <div id="collapse-container">
+            <!-- INSERT COLLAPSE COMPONENT HERE -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <img src="path-to-footer-logo" alt="Logo Kasa">
+            <p>© 2020 Kasa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Intégration de React et des composants -->
+    <script src="path-to-react.js"></script>
+    <script src="path-to-react-dom.js"></script>
+    <script src="path-to-your-aboutPageComponent.js"></script>
+    <script>
+        // Ici, tu montes tes composants React dans les éléments du DOM
+        ReactDOM.render(
+            React.createElement(About),
+            document.getElementById('collapse-container') // L'endroit où tu veux insérer tes collapses
+        );
+    </script>
+</body>
+
+</html>

@@ -1,33 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../../assets/kasa-logo.png';
+import React from "react";
+import logo from "../../assets/kasa-logo.png";
 
 export function Header() {
-    return React.createElement(
-        'header',
-        { className: 'header' },
-        React.createElement(
-            'div',
-            { className: 'logo' },
-            React.createElement('img', { src: logo, alt: 'Kasa Logo' })
-        ),
-        React.createElement(
-            'nav',
-            { className: 'navigation' },
-            React.createElement(
-                'ul',
-                null,
-                React.createElement(
-                    'li',
-                    null,
-                    React.createElement(Link, { to: '/', className: 'nav-link' }, 'Accueil')
-                ),
-                React.createElement(
-                    'li',
-                    null,
-                    React.createElement(Link, { to: '/about', className: 'nav-link' }, 'À Propos')
-                )
-            )
-        )
-    );
+  return (
+    <header className="header">
+      <div className="logo">
+        <img src={logo} alt="Kasa Logo"></img>
+      </div>
+      <nav className="navigation">
+        <ul>
+          <li>
+            <a href="/" className="nav-link">
+              Accueil
+            </a>
+          </li>
+          <a href="/about" className="nav-link">
+            À Propos
+          </a>
+          <li></li>
+        </ul>
+      </nav>
+    </header>
+  );
 }

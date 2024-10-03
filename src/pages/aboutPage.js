@@ -5,32 +5,16 @@ import Collapse from "../components/collapse/collapse";
 import { aboutList } from "../data/aboutList";
 
 export function About() {
-    return React.createElement(
-        Layout,
-        null,
-        React.createElement(BannerAboutPage),
-        React.createElement(
-            'section',
-            { className: 'values-section' },
-            aboutList.map((item, index) =>
-                React.createElement(
-                    Collapse,
-                    { key: index, title: item.title },
-                    React.createElement('p', null, item.content)
-                )
-            )
-        )
-    );
+    return (
+        <Layout>
+          <BannerAboutPage />
+          <section className="values-section">
+            {aboutList.map((item, index) => (
+              <Collapse key={index} title={item.title}>
+                <p>{item.content}</p>
+              </Collapse>
+            ))}
+          </section>
+        </Layout>
+      );
 }
-
-
-// export function About() {
-//     return ( 
-
-
-//         <section className='values-section'>
-
-//         </section>        
-
-//     )
-// }

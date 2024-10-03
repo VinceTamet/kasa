@@ -1,47 +1,27 @@
-import React, {useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import './collapse.scss';
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import "./collapse.scss";
 
-function Collapse({title, children}) {
+function Collapse({ title, children }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
 
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
+  return (
+    <div className="collapse-container">
+      <button className="collapse-button" onClick={toggle}>
+        {title}
+        <FontAwesomeIcon
+          icon={isOpen ? faChevronDown : faChevronUp}
+          className="collapse-icon"
+        />
+      </button>
 
-    return React.createElement(
-        'div',
-        { className: 'collapse-container' },
-        React.createElement(
-            'button',
-            {
-                className: 'collapse-button',
-                onClick: toggle
-            },
-            title,
-            React.createElement(
-                FontAwesomeIcon,
-                {
-                    icon: isOpen ? faChevronDown : faChevronUp,
-                    className: 'collapse-icon',
-                }
-            )
-        ),
-        isOpen
-            ? React.createElement(
-                  'div',
-                  { className: 'collapse-content' },
-                  children
-              )
-            : null
-    );
+      {isOpen && <div className="collapse-content">{children}</div>}
+    </div>
+  );
 }
 
 export default Collapse;
-
-
-
-
-
-

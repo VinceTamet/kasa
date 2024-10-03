@@ -10,32 +10,19 @@ function CollapseLogement({title, children}) {
         setIsOpen(!isOpen)
     }
 
-    return React.createElement(
-        'div',
-        { className: 'collapse-container-logement' },
-        React.createElement(
-            'button',
-            {
-                className: 'collapse-button-logement', 
-                onClick: toggle
-            },
-            title,
-            React.createElement(
-                FontAwesomeIcon,
-                {
-                    icon: isOpen ? faChevronDown : faChevronUp,
-                    className: 'collapse-icon',
-                }
-            )
-        ),
-        isOpen
-            ? React.createElement(
-                  'div',
-                  { className: 'collapse-content-logement' },
-                  children
-              )
-            : null
-    );
+    return (
+        <div className="collapse-container-logement">
+          <button className="collapse-button-logement" onClick={toggle}>
+            {title}
+            <FontAwesomeIcon
+              icon={isOpen ? faChevronDown : faChevronUp}
+              className="collapse-icon"
+            />
+          </button>
+          
+          {isOpen && <div className="collapse-content-logement">{children}</div>}
+        </div>
+      );
 }
 
 export default CollapseLogement;

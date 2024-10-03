@@ -22,3 +22,15 @@ export function About() {
         )
     );
 }
+
+
+// export function About() {
+//     return ( 
+
+
+//         <section className='values-section'>
+
+//         </section>        
+
+//     )
+// }

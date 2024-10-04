@@ -14,10 +14,11 @@ export function Header() {
               Accueil
             </a>
           </li>
-          <a href="/about" className="nav-link">
-            À Propos
-          </a>
-          <li></li>
+          <li>
+            <a href="/about" className="nav-link">
+              À Propos
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

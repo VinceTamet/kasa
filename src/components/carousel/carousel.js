@@ -27,6 +27,10 @@ function Carousel({ pictures }) {
         <button className="carousel-button next-button" onClick={nextImg}>
           <i className="fa-solid fa-chevron-right"></i>
         </button>
+
+        <div className="carousel-indicator">
+                {currentIndex + 1}/{pictures.length}
+            </div>
       </div>
     );
   }

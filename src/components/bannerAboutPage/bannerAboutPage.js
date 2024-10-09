@@ -5,6 +5,12 @@ import bannerAbout from '../../assets/about-background.png';
 export function BannerAboutPage() {
 
     return (
-        <div className='banner about-banner' style={{backgroundImage:`url(${bannerAbout})`}}></div>
+        <div className='about-banner' style={{backgroundImage: `url(${bannerAbout})`}}>
+            {/* <img
+                src={bannerAbout}
+                alt={"Vallée de montagne"}
+                className="img-banner"
+            /> */}
+        </div>
     )
 }

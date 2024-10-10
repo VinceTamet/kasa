@@ -42,15 +42,16 @@
         border-radius: 5px;
         font-size: 14px;
         left: 50%;
-    
+
     }
 
     // TABLET
     @media (max-width: 900px) {
         width: 95%;
         height: 15%;
+        margin-left: 10px;
 
-        .carousel-button{
+        .carousel-button {
             font-size: 75px;
         }
     }
@@ -65,7 +66,7 @@
             object-fit: cover;
         }
 
-        .carousel-button{
+        .carousel-button {
             font-size: 24px;
         }
     }

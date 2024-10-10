@@ -1,5 +1,3 @@
-/* HEADER */
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -24,6 +22,7 @@
 
     .logo {
       padding-right: 0;
+
       img {
         width: 60%;
         height: 46.88;
@@ -47,10 +46,6 @@
   @media (max-width: 600px) {
     font-size: 15px;
   }
-
-  // @media (max-width: 382px) {
-  //   font-size: 12px;
-  // }
 }
 
 .nav-link:hover {

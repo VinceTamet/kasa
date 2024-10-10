@@ -1,8 +1,8 @@
 import React from 'react';
-import { Layout } from "../components/layout";
-import { BannerAboutPage } from "../components/bannerAboutPage/bannerAboutPage";
-import Collapse from "../components/collapse/collapse";
-import { aboutList } from "../data/aboutList";
+import { Layout } from "../../components/layout/layout";
+import { BannerAboutPage } from "../../components/bannerAboutPage/bannerAboutPage";
+import Collapse from "../../components/collapse/collapse";
+import { aboutList } from "../../data/aboutList";
 
 export function About() {
     return (

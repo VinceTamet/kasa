@@ -2,13 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import logements from "../../data/logements.json";
 import Carousel from "../../components/carousel/carousel";
-import { Layout } from "../../components/layout";
+import { Layout } from "../../components/layout/layout";
 import { useNavigate } from "react-router-dom";
 import Tag from "../../components/tag/tag";
 import Rating from "../../components/rating/rating";
 import "./ficheLogement.scss";
-// import '../../components/collapse/collapse.scss';
-// import Collapse from "../../components/collapse/collapse";
 import "../../components/collapse/collapse.scss";
 import CollapseLogement from "../../components/collapseLogement/collapseLogement";
 
@@ -54,7 +52,6 @@ function FicheLogement() {
           <Rating rating={logement.rating} />
         </div>
       </div>
-
       
       <div className="fiche-logement-collapse">
         <CollapseLogement title="Description">

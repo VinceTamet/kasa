@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './errorPage.scss'; 
-import { Layout } from '../../components/layout';
+import { Layout } from '../../components/layout/layout';
 
 export function ErrorPage() {
     return (

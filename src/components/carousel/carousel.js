@@ -16,19 +16,27 @@ function Carousel({ pictures }) {
     setCurrentIndex(newIndex);
   };
 
+  const hasMultipleImages = pictures.length > 1;
+
   return (
     <div className="carousel-container">
-      <button className="carousel-button prev-button" onClick={prevImg}>
-        <i className="fa-solid fa-chevron-left"></i>
-      </button>
+      {/* On affiche les boutons nextImg et prevImg seulement si le logement a images > 1*/}
+      {hasMultipleImages && (
+        <button className="carousel-button prev-button" onClick={prevImg}>
+          <i className="fa-solid fa-chevron-left"></i>
+        </button>
+      )}
+
       <img
         src={pictures[currentIndex]}
         alt={`Image ${currentIndex + 1}`}
         className="carousel-image"
       />
-      <button className="carousel-button next-button" onClick={nextImg}>
-        <i className="fa-solid fa-chevron-right"></i>
-      </button>
+      {hasMultipleImages && (
+        <button className="carousel-button next-button" onClick={nextImg}>
+          <i className="fa-solid fa-chevron-right"></i>
+        </button>
+      )}
 
       <div className="carousel-indicator">
         {currentIndex + 1}/{pictures.length}

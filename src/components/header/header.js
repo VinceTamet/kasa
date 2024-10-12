@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/kasa-logo.png";
 
 export function Header() {
@@ -10,14 +11,24 @@ export function Header() {
       <nav className="navigation">
         <ul>
           <li>
-            <a href="/" className="nav-link">
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+            >
               Accueil
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/about" className="nav-link">
+            <NavLink
+              to={"/about"}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+            >
               À Propos
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
